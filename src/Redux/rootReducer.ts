@@ -2,7 +2,7 @@ import { combineReducers } from "@reduxjs/toolkit";
 import loginSlice from "./user/loginSlice";
 
 const rootReducer = combineReducers({
-  user: loginSlice,
+  userInfo: loginSlice,
 });
 
 export default rootReducer;

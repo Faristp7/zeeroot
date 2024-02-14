@@ -1,17 +1,24 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const userInfoSlice = createSlice({
-    name : "userInfo",
-    initialState : {
-        username : "",
-        isLoggedIn : false,
+const loginSlice = createSlice({
+  name: "userInfo",
+  initialState: {
+    username: "",
+    isLoggedIn: false,
+  },
+  reducers: {
+    handleLogin: (_state, action) => {
+      return { ...action.payload };
     },
-    reducers : {
-        handleLogin : (state, action) => {
-            return {...state, ...action.payload}
-        }
-    }
-})
+  },
+});
 
-export const { handleLogin } = userInfoSlice.actions;
-export default userInfoSlice.reducer
+export const { handleLogin } = loginSlice.actions;
+export default loginSlice.reducer;
+
+export type RootState = {
+  userInfo: {
+    username: string;
+    isLoggedIn: boolean;
+  };
+};
