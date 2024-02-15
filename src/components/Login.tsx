@@ -33,7 +33,7 @@ export default function Login() {
         <div className="text-center mb-5">
           <h1 className="font-medium text-4xl text-gray-700">Welcome Back</h1>
         </div>
-        <form className="flex flex-col gap-3" onClick={handleLoginClick}>
+        <form className="flex flex-col gap-3">
           <div className="flex flex-col gap-1">
             <label htmlFor="username" className="text-black font-semibold">
               Username
@@ -72,7 +72,7 @@ export default function Login() {
           </div>
           <button
             className="bg-blue-900 hover:bg-blue-950 text-white font-semibold rounded-lg py-1.5 mt-3 transition duration-300"
-            type="submit"
+            onClick={handleLoginClick}
           >
             Login
           </button>

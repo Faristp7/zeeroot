@@ -14,6 +14,7 @@ function App() {
         {userInfo.isLoggedIn ? (
           <>
             <Route path="/home" element={<Home />} />
+            <Route path="/" element={<Navigate to="/home" replace />} />
             <Route path="*" element={<PageNotFound />} />
           </>
         ) : (
