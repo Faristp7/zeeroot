@@ -9,7 +9,7 @@ export default function Home() {
   const [selectedComponent, setSelectodComponent] = useState<string>("Home");
 
   return (
-    <div className="bg-white dark:bg-black h-screen dark:text-white transition duration-300">
+    <div className="bg-white dark:bg-black h-full dark:text-white transition duration-300">
       <div className="">
         <SideBar
           handleResponsive={handleResponsive}
