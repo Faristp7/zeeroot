@@ -3,42 +3,14 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { handleLogin } from "../Redux/user/loginSlice";
+import { sideBar, themIcon } from "../assets/icons/icons";
+import { sideBarProp } from "../interface/DashboardInterface";
 
-const sideBar = [
-  {
-    img: "https://img.icons8.com/material-outlined/48/000000/home--v2.png",
-    title: "Home",
-  },
-  {
-    img: "https://img.icons8.com/material-outlined/48/000000/user--v1.png",
-    title: "Users",
-  },
-  {
-    img: "https://img.icons8.com/material-outlined/48/000000/appointment-reminders--v1.png",
-    title: "Notifications",
-  },
-  {
-    img: "https://img.icons8.com/material-outlined/48/000000/settings--v1.png",
-    title: "Settings",
-  },
-  {
-    img: "https://img.icons8.com/fluency-systems-regular/48/000000/chat-message.png",
-    title: "Messages",
-  },
-];
-
-const themIcon = [
-  "https://img.icons8.com/material-outlined/48/000000/sun--v1.png",
-  "https://img.icons8.com/windows/32/000000/crescent-moon.png",
-];
-
-export default function SideBar({
+const SideBar: React.FC<sideBarProp> = ({
   handleResponsive,
-  responsive
-}: {
-  handleResponsive: (responsive: boolean) => void;
-  responsive : boolean
-}) {
+  responsive,
+  setSelectodComponent,
+}) => {
   const [theme, handleTheme] = useState<boolean>(true);
 
   const navigate = useNavigate();
@@ -51,12 +23,6 @@ export default function SideBar({
     };
     dispatch(handleLogin(userData));
     navigate("/");
-  };
-
-  const handleSideBar = (val: string) => {
-    if (val === "Logout") {
-      handleLogout();
-    }
   };
 
   const handleThemeGlobal = () => {
@@ -81,7 +47,7 @@ export default function SideBar({
           <button
             className="flex gap-2"
             key={val.title}
-            onClick={() => handleSideBar(val.title)}
+            onClick={() => setSelectodComponent(val.title)}
           >
             <img
               width="24"
@@ -146,4 +112,6 @@ export default function SideBar({
       </div>
     </motion.nav>
   );
-}
+};
+
+export default SideBar;
