@@ -1,7 +1,9 @@
+import OverInfo from "./OverInfo";
+
 export default function Graphs() {
   return (
     <div>
-      Graph
+      <OverInfo/>   
     </div>
   )
 }
