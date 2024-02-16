@@ -12,7 +12,7 @@ export default function Graphs() {
         <div>
           <h1
             className="mb-5 font-extrabold sm:text-4xl leading-tight"
-            style={{ color: "#8884d8" }}
+            style={{ color: "#4c4991" }}
           >
             Sales Trends
           </h1>
@@ -23,13 +23,13 @@ export default function Graphs() {
         </div>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2">
-        <div className="bg-gray-200 dark:bg-gray-900 m-5 rounded-lg p-5">
+        <div className="bg-gray-200 dark:bg-gray-900 m-5 rounded-lg p-5 order-2">
            <Draft/>
         </div>
         <div>
         <h1
             className="mb-5 font-extrabold sm:text-4xl leading-tight"
-            style={{ color: "#82ca9d" }}
+            style={{ color: "#358c56" }}
           >
              Insights
         </h1>
