@@ -4,7 +4,6 @@ import { RootState } from "./Redux/user/loginSlice";
 import { Navigate, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import PageNotFound from "./components/PageNotFound";
-import Graphs from "./components/Graphs";
 import Users from "./components/Users";
 
 function App() {
@@ -18,7 +17,6 @@ function App() {
             <Route path="/home" element={<Home />} />
             <Route path="/" element={<Navigate to="/home" replace />} />
             <Route path="*" element={<PageNotFound />} />
-            <Route path="/graph" element={<Graphs/>}/>
             <Route path="/users" element={<Users/>}/>
           </>
         ) : (

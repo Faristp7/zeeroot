@@ -9,7 +9,7 @@ export default function Home() {
   const [selectedComponent, setSelectodComponent] = useState<string>("Home");
 
   return (
-    <div className="bg-white dark:bg-black h-full dark:text-white transition duration-300">
+    <div className="bg-white dark:bg-black  dark:text-white transition duration-300">
       <div className="">
         <SideBar
           handleResponsive={handleResponsive}
@@ -22,7 +22,7 @@ export default function Home() {
         initial={{ marginLeft: 48 }}
         animate={{ marginLeft: !responsive ? 68 : 180 }}
       >
-        <div className="py-5 pr-3">
+        <div className=" pr-3">
           {selectedComponent === "Home" && <Graphs />}
           {selectedComponent === "Users" && <Users />}
         </div>

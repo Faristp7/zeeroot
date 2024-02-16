@@ -6,7 +6,7 @@ import Draft from "./Draft";
 
 export default function Graphs() {
   return (
-    <div>
+    <div className="dark:bg-black py-5">
       <OverInfo />
       <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-3">
         <div>
